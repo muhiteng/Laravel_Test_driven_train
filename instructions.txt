@@ -1,0 +1,7 @@
+ vendor/bin/phpunit
+
+
+php artisan make:controller TodoListController
+php artisan make:model TodoList 
+php artisan make:migration CreateTodoListsTable
+php artisan make:factory TodoFactory -m=TodoList
