@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TodoListRequest;
 use App\Models\TodoList;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class TodoListController extends Controller
        
         return Response($todolist);
     }
-    public function store(Request $request)
+    public function store(TodoListRequest $request)
     {
         $todo_list = TodoList::create($request->all());
 
