@@ -30,4 +30,9 @@ class TodoListController extends Controller
         $todo_list->delete();
         return response('', Response::HTTP_NO_CONTENT);
     }
+    public function update(TodoListRequest $request, TodoList $todo_list)
+    {
+        $todo_list->update($request->all());
+        return $todo_list;
+    }
 }
